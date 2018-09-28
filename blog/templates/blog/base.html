@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="pt-BR">
+{% include "blog/header.html" %}
+    <body>
+{% include "blog/navbar.html" %}
+        <div class="jumbotron rounded-0 text-center div-background">
+                <h1 class="display-5">Meu Blog</h1>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% include "footer.html" %}
+    </body>
+</html>
